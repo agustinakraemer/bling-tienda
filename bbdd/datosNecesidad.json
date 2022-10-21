@@ -1,0 +1,11 @@
+[
+    {
+    "tipo": "Ordinario", 
+    "factor": 0
+    },
+
+    {
+    "tipo": "Urgente", 
+    "factor": 100
+    }
+]

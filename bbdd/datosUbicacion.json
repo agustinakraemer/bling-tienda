@@ -1,0 +1,21 @@
+[
+    {
+    "tipo": "Palma", 
+    "factor": 0
+    },
+    
+    {
+    "tipo": "Arenal, Marratxi, Magaluf", 
+    "factor": 20
+    },
+    
+    {
+    "tipo": "Algaida, Llucmajor, Sencelles, Binissalem, Bunyola", 
+    "factor": 50
+    },
+    
+    {
+    "tipo": "Arta, Alcudia, Pollensa, Soller", 
+    "factor": 70
+    }
+]

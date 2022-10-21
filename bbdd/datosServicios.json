@@ -1,0 +1,21 @@
+[   
+    {
+    "tipo": "Reparación", 
+    "factor": 800
+    },
+
+    {
+    "tipo": "Mantenimiento", 
+    "factor": 300
+    },
+    
+    {
+    "tipo": "Puesta en marcha", 
+    "factor": 400
+    },
+    
+    {
+    "tipo": "Instalación", 
+    "factor": 600
+    }
+]
