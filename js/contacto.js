@@ -1,12 +1,15 @@
 const servicio = document.querySelector("#servicio")
 const ubicacion = document.querySelector("#ubicacion")
 const necesidad = document.querySelector("#necesidad")
+const mensaje = document.querySelector("#mensaje")
+const nombre = document.querySelector("#nombre")
+const apellido = document.querySelector("#apellido")
 const zona = document.querySelector("#zona")
-const btnCotizar = document.getElementById("btnCotizar")
+const btnEnviarForm = document.getElementById("btnEnviarForm")
 const importe = document.querySelector("span")
 const btnEnviar = document.querySelector("span.guardar")
 const mail = document.querySelector("#mail")
-const recuadro = document.querySelector("#recuadro_presupuesto")
+const recuadro = document.querySelector("#recuadro_final")
 const form_before = document.querySelector("#form_before")
 let servicios = []
 const URLser = "../bbdd/datosServicios.json"
@@ -42,12 +45,11 @@ const cargarCombo = async (select, url)=> {
         servicios
     } 
 } 
-cargarCombo(servicio, URLser)
 cargarCombo(ubicacion, URLub)
 cargarCombo(necesidad, URLne)
 
 const datosCompletos = ()=> {
-    if (servicio.value !== "..." && ubicacion.value !== "..." && necesidad.value !== "..." && mail.value !== "") {
+    if (ubicacion.value !== "..." && necesidad.value !== "..." && mail.value !== "" && mensaje.value !== "" && nombre.value !== "" && apellido.value !== "") {
         return true
     } else {
         return false
@@ -55,20 +57,21 @@ const datosCompletos = ()=> {
 }
 const loading = ()=> `<span class="loader"></span>`
 
-const cotizamos = ()=> {
-    btnCotizar.innerHTML = loading()
+const enviar = ()=> {
+    btnEnviarForm.innerHTML = loading()
         setTimeout(() => {
-            const ppto = new Cotizador(servicio.value, ubicacion.value, necesidad.value, CostoBase)
+            const ppto = new Cotizador( ubicacion.value, necesidad.value, CostoBase)
                 importe.innerText = ppto.cotizar()
                 btnEnviar.classList.remove("ocultar")
                 recuadro.classList.remove("ocultar")
                 form_before.classList.add("ocultar")
+            nombresa.innerHTML = nombre.value
         }, 2000);
 }
 
 
 const realizarCotizacion = ()=> {
-    datosCompletos() ? cotizamos() : alerta("Completa todos los campos.","warning")
+    datosCompletos() ? enviar() : alerta("Completa todos los campos.","warning")
 }
 
 const enviarPorEmail = ()=> {
@@ -86,7 +89,7 @@ const enviarPorEmail = ()=> {
     
 }
 
-btnCotizar.addEventListener("click", realizarCotizacion)
+btnEnviarForm.addEventListener("click", realizarCotizacion)
 btnEnviar.addEventListener("click", enviarPorEmail)
 
 // SWEET ALERT

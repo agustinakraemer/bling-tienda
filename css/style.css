@@ -99,7 +99,7 @@ h1, h2, h3 {
     transition: all .3s;
 }
 .navegation__enlace:hover {
-    color: #e2d1cd!important;
+    color: var(--3)!important;
 }
 .navegation__enlace:last-of-type {
     margin-right: 0;
@@ -144,13 +144,13 @@ h1, h2, h3 {
     justify-content: center;
 }
 .producto {
-    background-color: var(--3);
+    background-color: rgba(0, 0, 0, 0.91);
     margin: 2rem;
     border-radius: 12px;
     text-align: center;
     box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
--webkit-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
--moz-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
+    -webkit-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
+    -moz-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
 }
 .producto a {
     text-decoration: none;
@@ -178,7 +178,7 @@ h1, h2, h3 {
     text-align: center;
 }
 .producto__button {
-    background-color: var(--5);
+    background-color: rgb(60, 60, 60);
     color: var(--blanco);
     font-weight: 700;
     border-style: none;
@@ -192,7 +192,7 @@ h1, h2, h3 {
     transition: all .3s;
 }
 .producto__button:hover {
-    background-color: var(--verde-oscuro);
+    background-color: var(--3);
 }
 /* CARRITO */
 .imagen-carrito {
@@ -208,12 +208,30 @@ h1, h2, h3 {
 #boton-carrito:hover {
     cursor: pointer;
     color: white;
-    background-color: #e2d1cdaa;
+    background-color: var(--3);
 }
 #boton-carrito:focus {
     outline: none;
 }
 .boton-agregar {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--primarioOscuro);
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0.5rem 1.8rem;
+    border: none;
+    border-radius: 12px;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+.boton-agregar:hover {
+    background-color: var(--3);
+    transition: all .3s;
+}
+.boton-finalizar {
     display: flex;
     margin-right: auto;
     margin-left: auto;
@@ -290,6 +308,28 @@ h1, h2, h3 {
     padding-top: 1rem;
     
 }
+.modal-carrito-final {
+    position: relative;
+    background-color: white;
+    min-width: 60rem;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+    border-radius: 12px;
+}
+.modal-contenedor-final {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
 .precioProducto {
     font-size: 2.3rem;
     display: flex;
@@ -356,15 +396,25 @@ h1, h2, h3 {
 .bloques {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 3rem;
+    margin-top: 5rem;
 }
 .bloque {
     text-align: center;
+    background-color: var(--3);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
+    -webkit-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
+    -moz-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
 }
+
 .bloque__titulo {
     margin: 0;
-    color: var(--red);
+    color: black;
     text-transform: uppercase;
+    padding-bottom: 1rem;
+    font-weight: 700;
 }
 .bloque__imagen {
     width: 100%;
@@ -383,7 +433,7 @@ h1, h2, h3 {
     border-radius: 1rem;
 }
 .div-cotizador h2 {
-    color: var(--1);
+    color: var(--3);
     font-weight: 700;
 }
 .div-cotizador fieldset{
@@ -435,15 +485,16 @@ button:active {
     padding: 0.9rem;
     border-radius: 0.5rem;
     border-color: white;
-    background-color: var(--blanco);
+    background-color: var(--3);
     font-size: 1.3rem;
 }
+
 .box_boton {
     width: 30%;
     min-width: fit-content;
     margin: 0 auto;
 }
-#btnCotizar {
+#btnEnviarForm {
     background-color: var(--primario);
     color: var(--blanco);
     padding: 0.5rem 0.5rem;
@@ -455,10 +506,11 @@ button:active {
     width: 100%;
     font-size: 1.6rem;
     cursor: pointer;
+    transition: all .3s;
     
 }
-#btnCotizar:hover {
-    background-color: var(--secundario);
+#btnEnviarForm:hover {
+    background-color: var(--3);
 }
 .recuadro {
     text-align: center;
@@ -468,8 +520,8 @@ button:active {
     text-decoration: none;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
@@ -479,7 +531,12 @@ button:active {
     
 }
 .recuadro p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    text-align: center;
+}
+.recuadro h2 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
 }
 span.ppto {
     font-size: 1.8rem;
@@ -487,28 +544,34 @@ span.ppto {
 span.enviar_mail {
     font-size: 0.8rem;
 }
-.cuadro_enviar_mail {
+.cuadro_volver {
     font-weight: bold;
     color: var(--gris-claro);
-    font-size: 1.2rem;
     text-transform: none;
-    margin-top: 1rem;
-    padding: 0.2rem 0.5rem;
+    margin-top: 4rem;
+    padding: 0.4rem 0.9rem;
     text-align: center;
-    background-color: rgb(76, 122, 95);
-    color: var(--blanco);
+    background-color: var(--1);
     width: fit-content;
     min-width: 9rem;
     margin-right: auto;
     margin-left: auto;
     cursor: pointer;
     border-radius: 5px;
+    transition: all .3s;
     box-shadow: 8px 7px 4px -4px rgba(0,0,0,0.75);
         -webkit-box-shadow: 8px 7px 4px -4px rgba(0,0,0,0.75);
         -moz-box-shadow: 8px 7px 4px -4px rgba(0,0,0,0.75);
 }
-.cuadro_enviar_mail:hover {
-    background-color: rgb(91, 152, 116);
+.cuadro_volver:hover {
+    background-color: var(--3);
+}
+.cuadro_volver a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
 }
 .foco-en-input {
     border-color: var(--rosa)!important;
@@ -517,6 +580,17 @@ span.enviar_mail {
     border: none;
     padding: 0.9rem;
     border-radius: 0.5rem;
+}
+/*---Sweet Alert----*/
+.swal2-html-container {
+    font-size: 2rem;
+}
+.swal2-title {
+    font-size: 2.5rem;
+}
+.swal2-styled.swal2-confirm {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 /*---- Loading Icon CSS------*/
 .loader {
@@ -567,7 +641,7 @@ span.enviar_mail {
     background-color: var(--3);
     padding-top: 8rem;
     padding-bottom: 4rem;
-    margin-top: 20rem;
+    margin-top: 10rem;
     
 }
 .footer__text {

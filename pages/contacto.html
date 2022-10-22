@@ -69,14 +69,14 @@
         <div class="div-cotizador" id="formulario">
             <div id="form_before">
                 <h2 class="center separador">Completa los datos solicitados</h2>
-                <div class="campo">
-                    <label class="campo__label" for="servicio">Selecciona el tipo de servicio</label>
-                    <select class="input-in" id="servicio">
-                    <option selected disabled>...</option>
-                    
-                    </select>
+                <div class="campo">  
+                    <label class="campo__label" for="nombre">Ingrese su nombre</label>
+                    <input class="input-in" type="text" id="nombre" value="Martin">
                 </div>
-                
+                <div class="campo">  
+                    <label class="campo__label" for="apellido">Ingrese su apellido</label>
+                    <input class="input-in" type="text" id="apellido" value="Garcia">
+                </div>
                 <div class="campo">
                     <label class="campo__label" for="zona">Selecciona su ubicación</label>
                     <select class="input-in" id="ubicacion">
@@ -93,16 +93,22 @@
                 </div>
                 <div class="campo">  
                     <label class="campo__label" for="mail">Ingrese su correo electrónico</label>
-                    <input class="input-in" type="mail" id="mail" placeholder="ejemplo@gmail.com">
+                    <input class="input-in" type="mail" id="mail" placeholder="ejemplo@gmail.com" value="martingarcia@gmail.com">
+                </div>
+                <div class="campo">  
+                    <label class="campo__label" for="mensaje">Mensaje</label>
+                    <input class="input-in text-area" type="text" id="mensaje" value="Quiero saber donde esta mi pedido número 3569">
                 </div>
                 <div class="center separador box_boton" >
-                    <button id="btnCotizar" title="Cotizar presupuesto">Cotizar</button>
+                    <button id="btnEnviarForm" title="Cotizar presupuesto">Enviar</button>
                 </div>
             </div>
-            <div class="recuadro ocultar" id="recuadro_presupuesto">
-                <p>Presupuesto aproximado: <span class="ppto">0.00</span> € </p>
-                <div class="cuadro_enviar_mail">
-                    <span class=" enviar_email guardar ocultar" title="Enviar por Email"> 📧 Enviar a mi correo</span>
+
+            <div class="recuadro ocultar" id="recuadro_final">
+                <h2>¡ Listo <span id="nombresa"> 0.00</span> !</h2>
+                <p>Nos pondremos en contacto contigo en un plazo máximo de 24hs</p>
+                <div class="cuadro_volver">
+                    <a href="../pages/productos.html"><span class="volverTienda guardar ocultar" title="Volver a la tienda"> Volver a la tienda</span></a>
                 </div>
             </div>
         </div>

@@ -1,21 +1,21 @@
 [
     {
-    "tipo": "Palma", 
+    "tipo": "CABA", 
     "factor": 0
     },
     
     {
-    "tipo": "Arenal, Marratxi, Magaluf", 
+    "tipo": "Zona Norte", 
     "factor": 20
     },
     
     {
-    "tipo": "Algaida, Llucmajor, Sencelles, Binissalem, Bunyola", 
+    "tipo": "Zona Oeste", 
     "factor": 50
     },
     
     {
-    "tipo": "Arta, Alcudia, Pollensa, Soller", 
+    "tipo": "Zona Sur", 
     "factor": 70
     }
 ]

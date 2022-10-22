@@ -39,15 +39,17 @@ const cargarContenido  = async ()=> {
 document.addEventListener("DOMContentLoaded", async ()=> {
     const espero = await cargarContenido()
           activarClicks()
-        }
-)
+    localStorage.getItem("carrito")
+})
+
+
 const actualizarCarrito = ()=> {
     contenedorCarrito.innerHTML = ""
     carrito.forEach((item) => {
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
-        div.innerHTML = `<p>${item.nombre}</p>
-                        <img class="imagen-carrito" src="${item.imagen}" >
+        div.innerHTML = `<img class="imagen-carrito" src="${item.imagen}" >
+                        <p>${item.nombre}</p>
                         <p>Cantidad: <span id="cantidad">${item.cantidad}</span></p>
                         <p>Precio: $${item.importe}</p>
                         <button onclick="eliminarDelCarrito(${item.id})" class="boton-eliminar">X</button>`
@@ -71,18 +73,12 @@ const agregarAlCarrito = (event)=> {
         item !== undefined && carrito.push(item)
         console.clear()
         actualizarCarrito()
-        console.table(carrito)
-        
+        console.table(carrito)  
 }
-
-
-
 
 const eliminarDelCarrito = () => {
     const item = carrito.find((item) => item.id === item.Id)
-
     const indice = carrito.indexOf(item) //Busca el elemento q yo le pase y nos devuelve su indice.
-
     carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos 
     // un elemento 
     actualizarCarrito() //LLAMAMOS A LA FUNCION QUE CREAMOS EN EL TERCER PASO. CADA VEZ Q SE 
@@ -91,10 +87,31 @@ const eliminarDelCarrito = () => {
 }
 
 const comprar = () => {
+    alertaFinal()
     carrito.length = 0
-    console.log("listo")
     actualizarCarrito() 
     console.log(carrito)
 }
+const botonComprar = document.getElementById('botonComprar')
+botonComprar.addEventListener("click", ()=> comprar() )
 
-botonComprar.addEventListener("click", ()=> comprar())
+const alertaFinal = ()=> {
+    Swal.fire({ 
+        title: "Compra exitosa",
+        text: "En breve recibirá un correo electronico con la factura.",
+        icon: "success",
+        backdrop: true,
+        iconColor:'green',
+        width: '70%',
+        confirmButtonColor:'#c69e98',
+        confirmButtonText: 'Aceptar',
+        background: '#e9e9e9',
+        stopKeydownPropagation: true,
+        allowEscapeKey: false,
+        allowEnterKey: false
+    }).then(function(){ 
+        location.reload();
+        }
+     );
+}
+

@@ -1,11 +1,11 @@
 [
     {
-    "tipo": "Ordinario", 
+    "tipo": "Ya soy cliente", 
     "factor": 0
     },
 
     {
-    "tipo": "Urgente", 
+    "tipo": "No soy cliente", 
     "factor": 100
     }
 ]
