@@ -2,7 +2,7 @@
     {
     "id": 1,
     "categoria": "Funda",
-    "nombre": "Rosa",
+    "nombre": "Noa",
     "imagen": "../img/1.jpg",
     "importe": 1500,
     "cantidad": 1
@@ -10,7 +10,7 @@
     {
     "id": 2,
     "categoria": "Funda",
-    "nombre": "Verde",
+    "nombre": "Oregon",
     "imagen": "../img/2.jpg",
     "importe": 1600,
     "cantidad": 1
@@ -18,7 +18,7 @@
     {
     "id": 3,
     "categoria": "Funda",
-    "nombre": "Flores",
+    "nombre": "Morley",
     "imagen": "../img/14.jpg",
     "importe": 2800,
     "cantidad": 1
@@ -26,7 +26,7 @@
     {
     "id": 4,
     "categoria": "Funda",
-    "nombre": "Gris",
+    "nombre": "Tokyo",
     "imagen": "../img/3.jpg",
     "importe": 1700,
     "cantidad": 1
@@ -34,7 +34,7 @@
     {
     "id": 5,
     "categoria": "Funda",
-    "nombre": "Charlotte",
+    "nombre": "Ukra",
     "imagen": "../img/4.jpg",
     "importe": 2000,
     "cantidad": 1
@@ -42,7 +42,7 @@
     {
     "id": 6,
     "categoria": "Funda",
-    "nombre": "Veneciana",
+    "nombre": "Kissin",
     "imagen": "../img/5.jpg",
     "importe": 1300,
     "cantidad": 1
@@ -50,7 +50,7 @@
     {
     "id": 7,
     "categoria": "Funda",
-    "nombre": "Emilio",
+    "nombre": "Pia",
     "imagen": "../img/6.jpg",
     "importe": 2100,
     "cantidad": 1
@@ -58,7 +58,7 @@
     {
     "id": 8,
     "categoria": "Funda",
-    "nombre": "Sauvignon",
+    "nombre": "Majo",
     "imagen": "../img/7.jpg",
     "importe": 2200,
     "cantidad": 1
@@ -66,7 +66,7 @@
     {
     "id": 9,
     "categoria": "Funda",
-    "nombre": "Sauvignon",
+    "nombre": "Kiev",
     "imagen": "../img/8.jpg",
     "importe": 1800,
     "cantidad": 1
@@ -74,7 +74,7 @@
     {
     "id": 10,
     "categoria": "Funda",
-    "nombre": "Trumpeter",
+    "nombre": "Sea",
     "imagen": "../img/9.jpg",
     "importe": 2400,
     "cantidad": 1
@@ -82,7 +82,7 @@
     {
     "id": 11,
     "categoria": "Funda",
-    "nombre": "Cabernet",
+    "nombre": "Blu",
     "imagen": "../img/10.jpg",
     "importe": 1100,
     "cantidad": 1
@@ -90,151 +90,151 @@
     {
     "id": 12,
     "categoria": "Funda",
-    "nombre": "Sauvignon",
+    "nombre": "Bless",
     "imagen": "../img/11.jpg",
     "importe": 900,
     "cantidad": 1
     },
     {
     "id": 13,
-    "categoria": "Blanco",
-    "nombre": "Chardonnay",
+    "categoria": "Funda",
+    "nombre": "Texas",
     "imagen": "../img/12.jpg",
     "importe": 1690,
     "cantidad": 1
     },
     {
     "id": 14,
-    "categoria": "Blanco",
-    "nombre": "Chardonnay",
+    "categoria": "Funda",
+    "nombre": "High",
     "imagen": "../img/13.jpg",
     "importe": 3000,
     "cantidad": 1
     },
     {
     "id": 15,
-    "categoria": "Blanco",
-    "nombre": "Chardonnay",
+    "categoria": "Funda",
+    "nombre": "London",
     "imagen": "../img/14.jpg",
     "importe": 2600,
     "cantidad": 1
     },
     {
     "id": 16,
-    "categoria": "Blanco",
-    "nombre": "Chardonnay",
+    "categoria": "Funda",
+    "nombre": "Urban",
     "imagen": "../img/1.jpg",
     "importe": 1900,
     "cantidad": 1
     },
     {
     "id": 17,
-    "categoria": "Blanco",
-    "nombre": "Viognier",
+    "categoria": "Funda",
+    "nombre": "Slouchy",
     "imagen": "../img/2.jpg",
     "importe": 3100,
     "cantidad": 1
     },
     {
     "id": 18,
-    "categoria": "Blanco",
-    "nombre": "Grigio",
+    "categoria": "Funda",
+    "nombre": "Sam",
     "imagen": "../img/3.jpg",
     "importe": 1450,
     "cantidad": 1
     },
     {
     "id": 19,
-    "categoria": "Blanco",
-    "nombre": "Antología L",
+    "categoria": "Funda",
+    "nombre": "Pat",
     "imagen": "../img/4.jpg",
     "importe": 2900,
     "cantidad": 1
     },
     {
     "id": 20,
-    "categoria": "Blanco",
-    "nombre": "Torrontés",
+    "categoria": "Funda",
+    "nombre": "Magnolia",
     "imagen": "../img/5.jpg",
     "importe": 3400,
     "cantidad": 1
     },
     {
     "id": 21,
-    "categoria": "Espumantes",
-    "nombre": "Nature",
+    "categoria": "Funda",
+    "nombre": "Fran",
     "imagen": "../img/6.jpg",
     "importe": 760,
     "cantidad": 1
     },
     {
     "id": 22,
-    "categoria": "Espumantes",
-    "nombre": "Brut",
+    "categoria": "Funda",
+    "nombre": "Moscu",
     "imagen": "../img/7.jpg",
     "importe": 890,
     "cantidad": 1
     },
     {
     "id": 23,
-    "categoria": "Espumantes",
-    "nombre": "Bru",
+    "categoria": "Funda",
+    "nombre": "Skin",
     "imagen": "../img/8.jpg",
     "importe": 2800,
     "cantidad": 1
     },
     {
     "id": 24,
-    "categoria": "Espumantes",
-    "nombre": "Noir",
+    "categoria": "Funda",
+    "nombre": "Monroe",
     "imagen": "../img/9.jpg",
     "importe": 2400,
     "cantidad": 1
     },
     {
     "id": 25,
-    "categoria": "Espumantes",
-    "nombre": "Dominio",
+    "categoria": "Funda",
+    "nombre": "Alaska",
     "imagen": "../img/10.jpg",
     "importe": 3000,
     "cantidad": 1
     },
     {
     "id": 26,
-    "categoria": "Espumantes",
-    "nombre": "Rutini",
+    "categoria": "Funda",
+    "nombre": "Queen",
     "imagen": "../img/11.jpg",
     "importe": 1700,
     "cantidad": 1
     },
     {
     "id": 27,
-    "categoria": "Espumantes",
-    "nombre": "Rosé",
+    "categoria": "Funda",
+    "nombre": "Heaven",
     "imagen": "../img/12.jpg",
     "importe": 1600,
     "cantidad": 1
     },
     {
     "id": 28,
-    "categoria": "Rosado",
-    "nombre": "Malbec",
+    "categoria": "Funda",
+    "nombre": "Kenia",
     "imagen": "../img/13.jpg",
     "importe": 990,
     "cantidad": 1
     },
     {
     "id": 29,
-    "categoria": "Rosado",
-    "nombre": "Rutini",
+    "categoria": "Funda",
+    "nombre": "Basic",
     "imagen": "../img/14.jpg",
     "importe": 3500,
     "cantidad": 1
     },
     {
     "id": 30,
-    "categoria": "Blanco",
-    "nombre": "Rutini ",
+    "categoria": "Funda",
+    "nombre": "Spring ",
     "imagen": "../img/11.jpg",
     "importe": 2000,
     "cantidad": 1

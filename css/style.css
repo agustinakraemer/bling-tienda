@@ -146,7 +146,6 @@ h1, h2, h3 {
 .producto {
     background-color: rgba(0, 0, 0, 0.91);
     margin: 2rem;
-    border-radius: 12px;
     text-align: center;
     box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
     -webkit-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
@@ -157,8 +156,6 @@ h1, h2, h3 {
 }
 .producto__imagen {
     width: 100%;
-    border-top-right-radius: 12px;
-    border-top-left-radius: 12px;
 }
 
 .producto__nombre {
@@ -335,6 +332,20 @@ h1, h2, h3 {
     display: flex;
     justify-content: right;
     font-weight: 700;
+    text-transform: uppercase;
+}
+.cuotasProducto {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 2rem;
+}
+.carritoVacio {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 .productoEnCarrito {
     border-left: 5px solid rgb(206, 157, 157);

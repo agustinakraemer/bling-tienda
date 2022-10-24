@@ -9,14 +9,23 @@ const contadorCarrito = document.getElementById('contadorCarrito')
 const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('precioTotal')
 const cantidadTotal = document.getElementById('cantidadTotal')
+const cuotas = document.getElementById("cuotas")
+const precioProducto = document.getElementsByClassName("precioProducto")[0]
+const cuotasProducto = document.getElementsByClassName("cuotasProducto")[0]
+const carritoVacio = document.getElementsByClassName("carritoVacio")[0]
 
 botonAbrir.addEventListener('click', ()=>{
     contenedorModal.classList.toggle('modal-active')
     if (carrito.length > 0){
         botonComprar.classList.remove("ocultar")
-     } else if (carrito.length >= 0){
+        carritoVacio.classList.add("ocultar")
+        precioProducto.classList.remove("ocultar")
+        cuotasProducto.classList.remove("ocultar")
+     } else if (carrito.length <= 0){
         botonComprar.classList.add("ocultar")
-
+        precioProducto.classList.add("ocultar")
+        cuotasProducto.classList.add("ocultar")
+        carritoVacio.classList.remove("ocultar")
      }
 })
 
