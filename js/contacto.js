@@ -108,9 +108,9 @@ const alerta = (mensaje, icono)=> {
             icon: icono,
             backdrop: true,
             iconColor:'rgb(189, 0, 0)',
-            confirmButtonColor:'#253759',
+            confirmButtonColor:'#c69e98',
             confirmButtonText: 'Aceptar',
-            background: 'rgb(212, 212, 212)',
+            background: '#e9e9e9',
             stopKeydownPropagation: true,
             allowEscapeKey: false,
             allowEnterKey: false
@@ -121,9 +121,9 @@ const alerta = (mensaje, icono)=> {
             icon: icono,
             backdrop: true,
             iconColor:'green',
-            confirmButtonColor:'#253759',
+            confirmButtonColor:'#c69e98',
             confirmButtonText: 'Aceptar',
-            background: 'rgb(212, 212, 212)',
+            background: '#e9e9e9',
             stopKeydownPropagation: true,
             allowEscapeKey: false,
             allowEnterKey: false
