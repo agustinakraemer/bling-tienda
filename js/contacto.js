@@ -65,7 +65,6 @@ const datosCompletos = ()=> {
 }
 const loading = ()=> `<span class="loader"></span>`
 
-
 const realizarCotizacion = ()=> {
     datosCompletos() ? cotizamos() : alerta("Completa todos los campos.","warning")
 }
@@ -81,7 +80,6 @@ const cotizamos = ()=> {
                 nombresa.innerHTML = nombre.value
         }, 1500);
 }
-
 
 const enviarPorEmail = ()=> {
     btnEnviar.innerHTML = loading()
