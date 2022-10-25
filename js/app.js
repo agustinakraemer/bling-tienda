@@ -33,7 +33,6 @@ const cargarContenido  = async ()=> {
     finally {
         contenedor__productos.innerHTML = contenidoHTML
     }
-   
 }
 
 const recuperarCarrito = ()=> {
@@ -67,12 +66,8 @@ const actualizarCarrito = ()=> {
                                 <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
                             </svg>
                         </button>`
-        contenedorCarrito.appendChild(div)
-        
+        contenedorCarrito.appendChild(div)       
     })
-    
-    precioTotal.innerText = carrito.reduce((acc, item) => acc + item.cantidad * item.importe, 0)
-    cuotas.innerText = (carrito.reduce((acc, item) => acc + item.importe / 6, 0)).toFixed(2)
 }
 
 const activarClicks = ()=> {
@@ -80,52 +75,10 @@ const activarClicks = ()=> {
         botones.forEach(boton => boton.addEventListener("click", (e)=> agregarAlCarrito(e)))
 }
 
-
 const agregarAlCarrito = (event)=> {
     let item = fundas.find(etiqueta => etiqueta.id === parseInt(event.target.id))
         item !== undefined && carrito.push(item)
         console.clear()
-        actualizarCarrito()
         console.table(carrito)  
-        localStorage.setItem("carrito", JSON.stringify(carrito))
-        
+        localStorage.setItem("carrito", JSON.stringify(carrito))      
 }
-
-const eliminarDelCarrito = () => {
-    const item = carrito.find((item) => item.id === item.Id)
-    const indice = carrito.indexOf(item) //Busca el elemento q yo le pase y nos devuelve su indice.
-    carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos 
-    // un elemento 
-    actualizarCarrito() //LLAMAMOS A LA FUNCION QUE CREAMOS EN EL TERCER PASO. CADA VEZ Q SE 
-    //MODIFICA EL CARRITO
-    console.log(carrito)
-}
-
-const comprar = () => {
-    alertaFinal()
-    carrito.length = 0
-    localStorage.clear(carrito)
-    actualizarCarrito() 
-    console.log(carrito)
-}
-
-const botonComprar = document.getElementById('botonComprar')
-botonComprar.addEventListener("click", ()=> comprar() )
-
-const alertaFinal = ()=> {
-    Swal.fire({ 
-        title: "Compra exitosa",
-        text: "En breve recibirá un correo electrónico con su factura.",
-        icon: "success",
-        backdrop: true,
-        iconColor:'green',
-        width: '70%',
-        confirmButtonColor:'#c69e98',
-        confirmButtonText: 'Aceptar',
-        background: '#e9e9e9',
-        stopKeydownPropagation: true,
-        allowEscapeKey: false,
-        allowEnterKey: false
-    });
-}
-

@@ -12,6 +12,7 @@ const botonComprar = document.getElementById("botonComprar")
 const sumaTotalClass = document.getElementsByClassName("sumaTotalClass")[0]
 const cuotasTotalClass = document.getElementsByClassName("cuotasTotalClass")[0]
 
+
 const recuperoCarrito = ()=> {
     let tabla = document.getElementById("tabla__body")
     carrito.forEach((item) => {
@@ -23,9 +24,7 @@ const recuperoCarrito = ()=> {
                     tabla.innerHTML += fila
                     sumaTotal.innerText = formatterPeso.format(carrito.reduce((acc, item) => acc + item.cantidad * item.importe, 0))
                     cuotasTotal.innerText = formatterPeso.format(carrito.reduce((acc, item) => acc + item.importe / 6, 0))
-}   
-)
-}
+} )}
 recuperoCarrito()
 
 const vacio = ()=> {
@@ -42,7 +41,6 @@ const vacio = ()=> {
      }
 }
 vacio()
-
 
 const alertaFinal = ()=> {
     Swal.fire({ 
@@ -64,20 +62,17 @@ const alertaFinal = ()=> {
      );
 }
 
-const eliminarDelCarrito = () => {
+/* const eliminarDelCarrito = () => {
     const item = carrito.find((item) => item.id === item.Id)
     const indice = carrito.indexOf(item) //Busca el elemento q yo le pase y nos devuelve su indice.
     carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos 
-    console.log(carrito)
-    
+    console.log(carrito) 
 }
-
-
+ */
 const comprar = () => {
-    alertaFinal()
-    carrito.length = 0
-    console.log(carrito)
     localStorage.clear(carrito)
+    alertaFinal()
+    console.log(carrito)
 }
 
 
