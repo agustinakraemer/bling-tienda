@@ -76,7 +76,7 @@
         <h1 class="center separador">CONSULTAR PRESUPUESTO</h1>
         <div class="div-cotizador" id="formulario">
             <div id="form_before">
-                <h2 class="center separador">Completa los datos solicitados</h2>
+                <h2 class="center separador">Solicitar presupuesto personalizado</h2>
                 <div class="campo">  
                     <label class="campo__label" for="nombre">Ingrese su nombre</label>
                     <input class="input-in" type="text" id="nombre" value="Martin">
@@ -93,6 +93,13 @@
                     </select>
                 </div>
                 <div class="campo">
+                    <label class="campo__label" for="servicio">Selecciona el tipo de servicio</label>
+                    <select class="input-in" id="servicio">
+                    <option selected disabled>...</option>
+                    
+                    </select>
+                </div>
+                <div class="campo">
                     <label class="campo__label" for="necesidad">Tipo de necesidad</label>
                     <select class="input-in" id="necesidad">
                         <option selected disabled>...</option>
@@ -103,27 +110,41 @@
                     <label class="campo__label" for="mail">Ingrese su correo electrónico</label>
                     <input class="input-in" type="mail" id="mail" placeholder="ejemplo@gmail.com" value="martingarcia@gmail.com">
                 </div>
-                <div class="campo">  
-                    <label class="campo__label" for="mensaje">Mensaje</label>
-                    <input class="input-in text-area" type="text" id="mensaje" value="Quiero saber donde esta mi pedido número 3569">
-                </div>
                 <div class="center separador box_boton" >
-                    <button id="btnEnviarForm" title="Cotizar presupuesto">Enviar</button>
+                    <button id="btnCotizar" title="Cotizar presupuesto">Cotizar</button>
                 </div>
             </div>
 
             <div class="recuadro ocultar" id="recuadro_final">
                 <h2>¡ Listo <span id="nombresa"> 0.00</span> !</h2>
-                <p>Nos pondremos en contacto contigo en un plazo máximo de 24hs</p>
-                <div class="cuadro_volver">
-                    <a href="../index.html"><span class="volverTienda guardar ocultar" title="Volver a la tienda"> Volver a la tienda</span></a>
+                <p>El presupuesto total es de: <span class="ppto">0.00</span></p>
+                <div class="cuadro_enviar_mail">
+                    <span class=" enviar_email guardar ocultar" title="Enviar por Email"> Enviar a mi correo</span>
                 </div>
             </div>
         </div>
     </main>
 
-   <footer class="footer">
-        <p class="footer__text">Todos los derechos reservados</p>
-   </footer>
+    <footer class="footer">
+        <div class="footer__text">
+            <p > Bling - Todos los derechos reservados.</p>
+            <h3>Medios de pago</h3>
+        </div>
+        <div class="cards">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="icon-logo lazyloaded" alt="visa" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="icon-logo lazyloaded" alt="mastercard" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="icon-logo lazyloaded" alt="amex" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" class="icon-logo lazyloaded" alt="diners" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" class="icon-logo lazyloaded" alt="ar_banelco" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" class="icon-logo lazyloaded" alt="ar_cabal" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" class="icon-logo lazyloaded" alt="ar_tarjeta-naranja" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" class="icon-logo lazyloaded" alt="ar_tarjeta-shopping" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="icon-logo lazyloaded" alt="mercadopago" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" class="icon-logo lazyloaded" alt="ar_argencard" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" class="icon-logo lazyloaded" alt="pagofacil" width="40" height="25">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" class="icon-logo lazyloaded" alt="rapipago" width="40" height="25">
+
+        </div>
+    </footer>
 </body>
 </html>

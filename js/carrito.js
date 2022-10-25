@@ -12,7 +12,6 @@ const botonComprar = document.getElementById("botonComprar")
 const sumaTotalClass = document.getElementsByClassName("sumaTotalClass")[0]
 const cuotasTotalClass = document.getElementsByClassName("cuotasTotalClass")[0]
 
-
 const recuperoCarrito = ()=> {
     let tabla = document.getElementById("tabla__body")
     carrito.forEach((item) => {
@@ -29,12 +28,10 @@ recuperoCarrito()
 
 const vacio = ()=> {
     if (carrito.length > 0){
-        botonComprar.classList.remove("ocultar")
         carritoVacio.classList.add("ocultar")
         sumaTotalClass.classList.remove("ocultar")
         cuotasTotalClass.classList.remove("ocultar")
      } else if (carrito.length <= 0){
-        botonComprar.classList.add("ocultar")
         sumaTotalClass.classList.add("ocultar")
         cuotasTotalClass.classList.add("ocultar")
         carritoVacio.classList.remove("ocultar")
@@ -70,10 +67,10 @@ const alertaFinal = ()=> {
 }
  */
 const comprar = () => {
-    localStorage.clear(carrito)
-    alertaFinal()
-    console.log(carrito)
+        localStorage.clear(carrito)
+        carrito.length = 0
+        alertaFinal()
+        console.log(carrito)
 }
-
 
 botonComprar.addEventListener("click", ()=> comprar() )

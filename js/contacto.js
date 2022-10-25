@@ -6,17 +6,23 @@ const nombre = document.querySelector("#nombre")
 const apellido = document.querySelector("#apellido")
 const zona = document.querySelector("#zona")
 const btnEnviarForm = document.getElementById("btnEnviarForm")
-const importe = document.querySelector("span")
+const importe = document.querySelector("span.ppto")
 const btnEnviar = document.querySelector("span.guardar")
 const mail = document.querySelector("#mail")
 const recuadro = document.querySelector("#recuadro_final")
 const form_before = document.querySelector("#form_before")
 const nombresa = document.querySelector("#nombresa")
+const btnCotizar = document.getElementById("btnCotizar")
 let servicios = []
 const URLser = "../bbdd/datosServicios.json"
 const URLne = "../bbdd/datosNecesidad.json"
 const URLub = "../bbdd/datosUbicacion.json"
-const CostoBase = 72.60
+const CostoBase = 500
+const formatterPeso = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0
+  })
 
 class Cotizador {
     constructor(factorNecesidad, factorServicio, factorUbicacion, factorBase) {
@@ -27,7 +33,7 @@ class Cotizador {
     }
     cotizar() {
         let resultado = ((this.factorBase + this.factorSr + this.factorUb + this.factorNecesidad)*1.21)
-        return resultado.toFixed(2)
+        return formatterPeso.format(resultado.toFixed(2))
     }
 }
 
@@ -46,11 +52,12 @@ const cargarCombo = async (select, url)=> {
         servicios
     } 
 } 
+cargarCombo(servicio, URLser)
 cargarCombo(ubicacion, URLub)
 cargarCombo(necesidad, URLne)
 
 const datosCompletos = ()=> {
-    if (ubicacion.value !== "..." && necesidad.value !== "..." && mail.value !== "" && mensaje.value !== "" && nombre.value !== "" && apellido.value !== "") {
+    if (ubicacion.value !== "..." && necesidad.value !== "..." && mail.value !== "" && nombre.value !== "" && apellido.value !== "") {
         return true
     } else {
         return false
@@ -58,7 +65,7 @@ const datosCompletos = ()=> {
 }
 const loading = ()=> `<span class="loader"></span>`
 
-const enviar = ()=> {
+/* const enviar = ()=> {
     btnEnviarForm.innerHTML = loading()
         setTimeout(() => {
             const ppto = new Cotizador( ubicacion.value, necesidad.value, CostoBase)
@@ -68,12 +75,24 @@ const enviar = ()=> {
                 form_before.classList.add("ocultar")
             nombresa.innerHTML = nombre.value
         }, 2000);
-}
-
+} */
 
 const realizarCotizacion = ()=> {
-    datosCompletos() ? enviar() : alerta("Completa todos los campos.","warning")
+    datosCompletos() ? cotizamos() : alerta("Completa todos los campos.","warning")
 }
+
+const cotizamos = ()=> {
+    btnCotizar.innerHTML = loading()
+        setTimeout(() => {
+            const ppto = new Cotizador(servicio.value, ubicacion.value, necesidad.value, CostoBase)
+                importe.innerText = ppto.cotizar()
+                btnEnviar.classList.remove("ocultar")
+                recuadro.classList.remove("ocultar")
+                form_before.classList.add("ocultar")
+                nombresa.innerHTML = nombre.value
+        }, 1500);
+}
+
 
 const enviarPorEmail = ()=> {
     btnEnviar.innerHTML = loading()
@@ -90,7 +109,7 @@ const enviarPorEmail = ()=> {
     
 }
 
-btnEnviarForm.addEventListener("click", realizarCotizacion)
+btnCotizar.addEventListener("click", realizarCotizacion)
 btnEnviar.addEventListener("click", enviarPorEmail)
 
 // SWEET ALERT
@@ -131,3 +150,4 @@ const alerta = (mensaje, icono)=> {
     }
     
 }
+

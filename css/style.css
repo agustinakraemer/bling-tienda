@@ -436,10 +436,9 @@ h1, h2, h3 {
 }
 /*-----CARRITO---------*/
 .tabla_productos {
-    margin-top: 10rem;
     background-color: #ffffff;
     width: 45%;
-    margin: 3rem auto;
+    margin: 8rem auto;
     border-collapse: collapse;
     border-radius: 12px;
     font-size: 1.9rem;
@@ -556,7 +555,7 @@ button:active {
     min-width: fit-content;
     margin: 0 auto;
 }
-#btnEnviarForm {
+#btnCotizar {
     background-color: var(--primario);
     color: var(--blanco);
     padding: 0.5rem 0.5rem;
@@ -568,8 +567,7 @@ button:active {
     width: 100%;
     font-size: 1.6rem;
     cursor: pointer;
-    transition: all .3s;
-    
+    transition: all .3s;  
 }
 #btnEnviarForm:hover {
     background-color: var(--3);
@@ -606,7 +604,7 @@ span.ppto {
 span.enviar_mail {
     font-size: 0.8rem;
 }
-.cuadro_volver {
+.cuadro_enviar_mail {
     font-weight: bold;
     color: var(--gris-claro);
     text-transform: none;
@@ -615,7 +613,7 @@ span.enviar_mail {
     text-align: center;
     background-color: var(--1);
     width: fit-content;
-    min-width: 9rem;
+    min-width: 10rem;
     margin-right: auto;
     margin-left: auto;
     cursor: pointer;
@@ -625,15 +623,14 @@ span.enviar_mail {
         -webkit-box-shadow: 8px 7px 4px -4px rgba(0,0,0,0.75);
         -moz-box-shadow: 8px 7px 4px -4px rgba(0,0,0,0.75);
 }
-.cuadro_volver:hover {
+.cuadro_enviar_mail:hover {
     background-color: var(--3);
 }
-.cuadro_volver a{
+.cuadro_enviar_mail span{
     text-decoration: none;
     color: var(--blanco);
     font-size: 1.5rem;
     text-transform: uppercase;
-
 }
 .foco-en-input {
     border-color: var(--rosa)!important;
@@ -706,14 +703,29 @@ span.enviar_mail {
     margin-top: 10rem;
     
 }
-.footer__text {
+.footer__text p{
     color: var(--negro);
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+.footer__text h3{
+    color: var(--negro);
+    text-align: center;
+    font-size: 1.5rem;
     padding-bottom: 2rem;
     margin-bottom: 0;
+    font-weight: 700;
+    padding-top: 2rem;
 }
-
+.cards {
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    justify-content: space-between;
+    justify-items: center;
+}
 @media (max-width: 480px) {
     p {
         font-size: 1rem;

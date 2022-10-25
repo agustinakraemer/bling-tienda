@@ -1,11 +1,11 @@
-const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
-const contenedorModalFinal = document.getElementsByClassName('modal-contenedor-final')[0]
+/* const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
+const contenedorModalFinal = document.getElementsByClassName('modal-contenedor-final')[0] */
 /* const botonAbrir = document.getElementById('boton-carrito') */
-const botonCerrar = document.getElementById('carritoCerrar')
+/* const botonCerrar = document.getElementById('carritoCerrar')
 const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
-const modalCarritoFinal = document.getElementsByClassName('modal-carrito-final')[0]
-const contenedorCarrito = document.getElementById('carrito-contenedor')
-const contadorCarrito = document.getElementById('contadorCarrito')
+const modalCarritoFinal = document.getElementsByClassName('modal-carrito-final')[0] */
+
+/* const contadorCarrito = document.getElementById('contadorCarrito')
 const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('precioTotal')
 const cantidadTotal = document.getElementById('cantidadTotal')
@@ -13,8 +13,8 @@ const cuotas = document.getElementById("cuotas")
 const precioProducto = document.getElementsByClassName("precioProducto")[0]
 const cuotasProducto = document.getElementsByClassName("cuotasProducto")[0]
 const carritoVacio = document.getElementsByClassName("carritoVacio")[0]
-
-botonAbrir.addEventListener('click', ()=>{
+ */
+/* botonAbrir.addEventListener('click', ()=>{
     contenedorModal.classList.toggle('modal-active')
     if (carrito.length > 0){
         botonComprar.classList.remove("ocultar")
@@ -27,7 +27,7 @@ botonAbrir.addEventListener('click', ()=>{
         cuotasProducto.classList.add("ocultar")
         carritoVacio.classList.remove("ocultar")
      }
-})
+}) */
 
 /* contenedorModal.addEventListener('click', (event) =>{
     contenedorModal.classList.toggle('modal-active')

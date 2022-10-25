@@ -1,21 +1,21 @@
 [   
     {
-    "tipo": "Reparación", 
+    "tipo": "Color liso + Foto", 
     "factor": 800
     },
 
     {
-    "tipo": "Mantenimiento", 
-    "factor": 300
+    "tipo": "Estampado personalizado + Foto", 
+    "factor": 900
     },
     
     {
-    "tipo": "Puesta en marcha", 
-    "factor": 400
-    },
-    
-    {
-    "tipo": "Instalación", 
+    "tipo": "Estampado personalizado", 
     "factor": 600
+    },
+    
+    {
+    "tipo": "Foto completa", 
+    "factor": 1200
     }
 ]

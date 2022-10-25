@@ -47,8 +47,7 @@ document.addEventListener("DOMContentLoaded", async ()=> {
           activarClicks()
 })
 
-const actualizarCarrito = ()=> {
-    contenedorCarrito.innerHTML = ""
+/* const actualizarCarrito = ()=> {
     carrito.forEach((item) => {
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
@@ -65,10 +64,9 @@ const actualizarCarrito = ()=> {
                                 <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
                                 <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
                             </svg>
-                        </button>`
-        contenedorCarrito.appendChild(div)       
+                        </button>`     
     })
-}
+} */
 
 const activarClicks = ()=> {
     let botones = document.querySelectorAll("button.producto__button")

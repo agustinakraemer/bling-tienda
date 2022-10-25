@@ -1,11 +1,11 @@
 [
     {
-    "tipo": "Ya soy cliente", 
-    "factor": 0
+    "tipo": "Urgente / hasta 5 dias habiles", 
+    "factor": 400
     },
 
     {
-    "tipo": "No soy cliente", 
-    "factor": 100
+    "tipo": "de 5 a 15 dias habiles", 
+    "factor": 0
     }
 ]
