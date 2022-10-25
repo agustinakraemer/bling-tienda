@@ -1,7 +1,7 @@
 const contenedor__productos = document.getElementById("contenedor__productos")
 const contenedor = document.querySelector(".container")
 const URL = "../bbdd/fundas.json"
-const carrito = []
+let carrito = []
 let fundas = []
 let contenidoHTML = ""
 
@@ -33,13 +33,20 @@ const cargarContenido  = async ()=> {
     finally {
         contenedor__productos.innerHTML = contenidoHTML
     }
+   
 }
+
+const recuperarCarrito = ()=> {
+    if (localStorage.getItem("carrito")){
+        carrito = JSON.parse(localStorage.getItem("carrito")) 
+    }
+}
+recuperarCarrito()
 
 document.addEventListener("DOMContentLoaded", async ()=> {
     const espero = await cargarContenido()
           activarClicks()
 })
-
 
 const actualizarCarrito = ()=> {
     contenedorCarrito.innerHTML = ""
@@ -60,12 +67,10 @@ const actualizarCarrito = ()=> {
                                 <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
                             </svg>
                         </button>`
-
         contenedorCarrito.appendChild(div)
         
-        localStorage.setItem("carrito", JSON.stringify(carrito))
     })
-    contadorCarrito.innerText = carrito.length
+    
     precioTotal.innerText = carrito.reduce((acc, item) => acc + item.cantidad * item.importe, 0)
     cuotas.innerText = (carrito.reduce((acc, item) => acc + item.importe / 6, 0)).toFixed(2)
 }
@@ -82,6 +87,8 @@ const agregarAlCarrito = (event)=> {
         console.clear()
         actualizarCarrito()
         console.table(carrito)  
+        localStorage.setItem("carrito", JSON.stringify(carrito))
+        
 }
 
 const eliminarDelCarrito = () => {
@@ -97,9 +104,11 @@ const eliminarDelCarrito = () => {
 const comprar = () => {
     alertaFinal()
     carrito.length = 0
+    localStorage.clear(carrito)
     actualizarCarrito() 
     console.log(carrito)
 }
+
 const botonComprar = document.getElementById('botonComprar')
 botonComprar.addEventListener("click", ()=> comprar() )
 
@@ -117,9 +126,6 @@ const alertaFinal = ()=> {
         stopKeydownPropagation: true,
         allowEscapeKey: false,
         allowEnterKey: false
-    }).then(function(){ 
-        location.reload();
-        }
-     );
+    });
 }
 

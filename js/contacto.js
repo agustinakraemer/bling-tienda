@@ -11,6 +11,7 @@ const btnEnviar = document.querySelector("span.guardar")
 const mail = document.querySelector("#mail")
 const recuadro = document.querySelector("#recuadro_final")
 const form_before = document.querySelector("#form_before")
+const nombresa = document.querySelector("#nombresa")
 let servicios = []
 const URLser = "../bbdd/datosServicios.json"
 const URLne = "../bbdd/datosNecesidad.json"

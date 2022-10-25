@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bling-Carrito</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
+    <title>Tienda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--bootstrap-->
@@ -17,11 +17,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <!---Sweet Alert2 Library--->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!---------->
     <link rel="stylesheet" href="../css/style.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="../js/main.js"></script>
-    <script defer src="../js/app.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/carrito.js"></script>
 </head>
 <body>
     <section id="header_bg">
@@ -51,17 +53,14 @@
                         <a class="nav-link navegation__enlace" href="../index.html">Home <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link navegation__enlace" href="productos.html">Productos <span class="sr-only">(current)</span></a>
+                        <a class="nav-link navegation__enlace" href="carrito.html">Nosotros <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link navegation__enlace" href="nosotros.html">Nosotros <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link navegation__enlace" href="#">Contacto <span class="sr-only">(current)</span></a>
+                        <a class="nav-link navegation__enlace" href="contacto.html">Contacto <span class="sr-only">(current)</span></a>
                       </li>
                     </ul>
                 </div>
-                <div class="nav-item cart_icon" id="ver-carrito">
+                <div class="nav-item cart_icon" id="boton-carrito">
                     <a href="carrito.html">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -69,17 +68,47 @@
                             <circle cx="17" cy="19" r="2" />
                             <path d="M17 17h-11v-14h-2" />
                             <path d="M6 5l14 1l-1 7h-13" />
-                        </svg>
+                        </svg><i class="fas fa-shopping-cart"></i>
                     </a>
                 </div>
         </nav>
     </section>
-    <main class="container">
-        
-    </main>
 
-    <div class="modal-contenedor" id="modal-contenedor">
-        
+    <div class="tabla_productos">
+        <table id="tabla">
+          <thead id="tabla__head">
+            <tr>
+              <td></td>
+              <td align="center">Nombre</td>
+              <td align="center">Precio</td>
+              <td></td>
+            </tr>
+          </thead> <!-- div tabla__head-->
+          <tbody id="tabla__body">
+            
+          </tbody>  <!-- div tabla__body-->
+          <tr>
+            <td colspan="3" align="right" class="right sumaTotalClass ocultar">TOTAL <span id="sumaTotal"></span></td>
+          </tr>
+          <tr>
+            <td colspan="3" align="right" class="right cuotasTotalClass ocultar">O hasta 6 cuotas sin interés de <span id="cuotasTotal"></span></td>
+          </tr>
+          
+        </table>
+        <p class="carritoVacio">No hay productos en el carrito.</p>
+        <button id="botonComprar" class="boton-agregar">Comprar</button>
     </div>
+
+    <div class="modal-contenedor-final">
+        <div class="modal-carrito-final">
+            <h3>Su compra se ha realizado con éxito</h3>
+            
+            <a href="productos.html"><button id="boton-finalizar" class="boton-finalizar">Finalizar</button></a>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p class="footer__text"> Front End Store - Todos los derechps reservados.</p>
+    </footer>
 </body>
 </html>
