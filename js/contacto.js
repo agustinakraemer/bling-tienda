@@ -65,17 +65,6 @@ const datosCompletos = ()=> {
 }
 const loading = ()=> `<span class="loader"></span>`
 
-/* const enviar = ()=> {
-    btnEnviarForm.innerHTML = loading()
-        setTimeout(() => {
-            const ppto = new Cotizador( ubicacion.value, necesidad.value, CostoBase)
-                importe.innerText = ppto.cotizar()
-                btnEnviar.classList.remove("ocultar")
-                recuadro.classList.remove("ocultar")
-                form_before.classList.add("ocultar")
-            nombresa.innerHTML = nombre.value
-        }, 2000);
-} */
 
 const realizarCotizacion = ()=> {
     datosCompletos() ? cotizamos() : alerta("Completa todos los campos.","warning")

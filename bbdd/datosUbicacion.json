@@ -6,7 +6,7 @@
     
     {
     "tipo": "Zona Norte", 
-    "factor": 20
+    "factor": 50
     },
     
     {
@@ -16,6 +16,6 @@
     
     {
     "tipo": "Zona Sur", 
-    "factor": 70
+    "factor": 50
     }
 ]

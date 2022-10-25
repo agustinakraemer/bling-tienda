@@ -59,13 +59,6 @@ const alertaFinal = ()=> {
      );
 }
 
-/* const eliminarDelCarrito = () => {
-    const item = carrito.find((item) => item.id === item.Id)
-    const indice = carrito.indexOf(item) //Busca el elemento q yo le pase y nos devuelve su indice.
-    carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos 
-    console.log(carrito) 
-}
- */
 const comprar = () => {
         localStorage.clear(carrito)
         carrito.length = 0
