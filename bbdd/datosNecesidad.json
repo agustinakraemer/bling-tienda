@@ -1,11 +1,11 @@
 [
     {
-    "tipo": "Urgente / hasta 5 dias habiles", 
+    "tipo": "Urgente / hasta 5 días hábiles", 
     "factor": 400
     },
 
     {
-    "tipo": "de 5 a 15 dias habiles", 
+    "tipo": "de 5 a 15 días hábiles", 
     "factor": 0
     }
 ]
